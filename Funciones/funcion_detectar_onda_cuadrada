@@ -1,0 +1,21 @@
+bool es_onda_cuadrada(int muestras[], int num_muestras) {
+    int valor_maximo = muestras[0];
+    int valor_minimo = muestras[0];
+
+    for (int i = 1; i < num_muestras; i++) {
+        if (muestras[i] > valor_maximo) {
+            valor_maximo = muestras[i];
+        }
+        if (muestras[i] < valor_minimo) {
+            valor_minimo = muestras[i];
+        }
+    }
+
+    for (int i = 0; i < num_muestras; i++) {
+        if (muestras[i] != valor_maximo && muestras[i] != valor_minimo) {
+            return false;
+        }
+    }
+
+    return true;
+}
