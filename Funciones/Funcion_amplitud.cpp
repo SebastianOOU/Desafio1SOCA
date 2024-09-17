@@ -1,5 +1,5 @@
 float calcular_amplitud_onda(int valores_ondas[]){
-  /*La funcion recibe valores globales (contador).
+    /*La funcion recibe valores globales (contador).
     Recibe un arreglo dinamico.
     Retorna un float del valor de amplitud.*/
     int mayor = 0;
@@ -7,9 +7,14 @@ float calcular_amplitud_onda(int valores_ondas[]){
 
     for (int i = 0;  i < contador; i++){
 
-        if (valores_ondas[i] > mayor){
+        if (mayor == 0){
             mayor = valores_ondas[i];
 
+        }else{
+
+            if (valores_ondas[i] > mayor){
+                mayor = valores_ondas[i];
+            }
         }
         if (menor == 0){
             menor = valores_ondas[i];
