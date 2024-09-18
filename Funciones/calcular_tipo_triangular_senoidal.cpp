@@ -11,11 +11,11 @@ void calcular_tipo_triangular_senoidal(int valores_ondas[], int *ptr_dato){
 
         if (valores_ondas[i] >= 0 && valores_ondas[i - 1] < 0){
             if (opcion2){
-                opcion3 = true;
+                opcion3 = true;//True capturar segunda cresta.
                 opcion2 = false;
 
             }else{
-                opcion1 = true;
+                opcion1 = true;//True capturar primera cresta.
             }
         }
         if(opcion1 && valores_ondas[i] < 0){
